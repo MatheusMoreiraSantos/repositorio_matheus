@@ -10,12 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 
 public class TextoFragment extends Fragment {
     private EditText    edtInformarTexto;
     private SeekBar     skbFormatarTexto;
     private Button      btnTexto;
+    private TextView    tvTextoFormatado;
 
 
     public TextoFragment() {
@@ -38,8 +40,18 @@ public class TextoFragment extends Fragment {
         edtInformarTexto    = textoLayoutInflated.findViewById(R.id.edtInformarTexto);
         skbFormatarTexto    = textoLayoutInflated.findViewById(R.id.skbFormatarTexto);
         btnTexto            = textoLayoutInflated.findViewById(R.id.btnTexto);
-
+        tvTextoFormatado    = textoLayoutInflated.findViewById(R.id.tvTextoFormatado);
 
         return textoLayoutInflated;
     }
+
+    public void trocarPropriedadesDoTexto(int tamanhofonte, String text){
+        tvTextoFormatado.setTextSize(tamanhofonte);
+        tvTextoFormatado.setText(text);
+    }
+
+
+
+
+
 }

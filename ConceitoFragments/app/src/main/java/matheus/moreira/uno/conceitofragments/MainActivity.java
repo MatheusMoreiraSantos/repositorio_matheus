@@ -9,7 +9,9 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity {
+import matheus.moreira.uno.conceitofragments.custom.interfac.ToolbarListener;
+
+public class MainActivity extends FragmentActivity implements ToolbarFragment.ToolbarListener {
 
 
     @Override
@@ -17,21 +19,11 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
-
-
-
-
     }
 
-
-
-
-
-
-
-
+    @Override
+    public void onButtonClick(int tamanhofonte, String texto) {
+        TextoFragment tvTextoFormatado = (TextoFragment) getSupportFragmentManager().findFragmentById(R.id.frgTexto);
+        tvTextoFormatado.trocarPropriedadesDoTexto(tamanhofonte, texto);
+    }
 }

@@ -22,10 +22,10 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
     private ToolbarListener toolbarListener;
     private static int      TEXT_SIZE = 10;
 
-
+    //Ajuda a ter acesso as views/fragments do layout;
     public interface ToolbarListener{
 
-        public void onButtonClick(int position, String texto);
+        public void onButtonClick(int tamanhofonte, String texto);
 
     }
 
@@ -63,14 +63,14 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
             }
         });
 
-
+        skbFormatarTexto.setOnSeekBarChangeListener((SeekBar.OnSeekBarChangeListener) this);
         
 
         return toolBarLayoutInflated;
     }
 
     @Override
-    public void onAttach(@NonNull Context context) {
+    public void onAttach(@NonNull Context context) { //Impede que ocorram exceções; Ciclo de vida do fragment;
         super.onAttach(context);
 
         try {
@@ -83,6 +83,7 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
 
     }
 
+    //Passa essas informações na hora em que há um clique no botão;
     public void buttonClicked(View v) {
         toolbarListener.onButtonClick(TEXT_SIZE, edtInformarTexto.getText().toString());
     }
@@ -91,6 +92,7 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
+        TEXT_SIZE = i;
     }
 
     @Override
