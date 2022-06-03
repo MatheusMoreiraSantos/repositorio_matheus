@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center">
+
+
+        <TextView
+            android:id="@+id/tvTitulo02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prova Teórico-Prática disciplina Programação Orientada a Objetos"
+            android:textAlignment="center"
+            android:textColor="#130E0E"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/edtNumeroQuestao"
+            android:layout_width="150"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:hint="Número da Questão"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/imbCheck"
+            app:layout_constraintHorizontal_bias="0.47"
+
+            app:layout_constraintStart_toEndOf="@+id/imbClear"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo02" />
+
+        <TextView
+            android:id="@+id/tvNome02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Matheus Santos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNome01" />
+
+        <ImageButton
+            android:id="@+id/imbClear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtNumeroQuestao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_clear_24" />
+
+        <ImageButton
+            android:id="@+id/imbCheck"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtNumeroQuestao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_baseline_check_24" />
+
+        <TextView
+            android:id="@+id/tvData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="03/05/2022"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo02" />
+
+        <TextView
+            android:id="@+id/tvPergunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pergunta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumeroQuestao" />
+
+        <TextView
+            android:id="@+id/tvResposta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Resposta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPergunta"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="323dp"
+            tools:layout_editor_absoluteY="711dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvNome01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Cleber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvResposta"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+</ScrollView>
