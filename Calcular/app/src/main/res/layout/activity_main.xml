@@ -26,14 +26,14 @@
         android:id="@+id/spiOpcoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tvOpcao"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOpcao"
 
-        />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tvOperacao"
@@ -52,18 +52,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:textAlignment="center"
         android:ems="10"
         android:hint="valor"
         android:inputType="number"
+        android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/tvOperacao"
-        app:layout_constraintTop_toBottomOf="@+id/spiOpcoes" />
+        app:layout_constraintTop_toBottomOf="@+id/spiOpcoes"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/imgOperacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="22dp"
+        android:backgroundTint="#130404"
         app:layout_constraintEnd_toEndOf="@+id/edtOperando1"
         app:layout_constraintStart_toStartOf="@+id/edtOperando1"
         app:layout_constraintTop_toBottomOf="@+id/edtOperando1"
@@ -73,7 +75,7 @@
         android:id="@+id/edtOperando2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="valor"
         android:inputType="number"
@@ -81,36 +83,41 @@
         app:layout_constraintEnd_toEndOf="@+id/edtOperando1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edtOperando1"
-        app:layout_constraintTop_toBottomOf="@+id/imgOperacao" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/edtOperando2"
-        app:layout_constraintStart_toStartOf="@+id/edtOperando2"
-        app:layout_constraintTop_toBottomOf="@+id/edtOperando2"
-        app:srcCompat="@drawable/ic_add_24" />
+        app:layout_constraintTop_toBottomOf="@+id/imgOperacao"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="36dp"
         android:hint="Resultado da operação matemática"
         app:layout_constraintEnd_toEndOf="@+id/edtOperando2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edtOperando2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
 
     <Button
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
         android:text="Calcular"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="341dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtOperando2"
+        app:layout_constraintStart_toStartOf="@+id/edtOperando2"
+        app:layout_constraintTop_toBottomOf="@+id/imgOperacao2"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imgOperacao2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="@+id/edtOperando2"
+        app:layout_constraintStart_toStartOf="@+id/edtOperando2"
+        app:layout_constraintTop_toBottomOf="@+id/edtOperando2"
+        app:srcCompat="@drawable/img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
