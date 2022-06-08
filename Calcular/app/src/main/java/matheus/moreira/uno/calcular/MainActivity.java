@@ -19,17 +19,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener { //AdapterView é uma classe da API do java e o OnItem é a interface;
-    public static final String TAG              = "MainActivity";
-    private static final String DIVISAO         = "Dividir";
-    private static final String MULTIPLICACAO   = "Multiplicar";
-    private static final String SOMA            = "Somar";
-    private static final String SUBTRACAO       = "Subtrair";
+    public static final String TAG = "MainActivity";
+    private static final String DIVISAO = "Dividir";
+    private static final String MULTIPLICACAO = "Multiplicar";
+    private static final String SOMA = "Somar";
+    private static final String SUBTRACAO = "Subtrair";
     private EditText edtOperando1, edtOperando2;
     private TextView tvOpcao, tvResultado;
     private Spinner spiOpcoes;
     private ImageView imgOperacao, imgIgual;
     private Button btnCalcular;
-
 
 
     @Override
@@ -39,19 +38,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null){
+        if (actionBar != null) {
             actionBar.setTitle("Calcular");
         }
 
 
-        edtOperando1        = findViewById(R.id.edtOperando1);
-        edtOperando2        = findViewById(R.id.edtOperando2);
-        tvOpcao             = findViewById(R.id.tvOpcao);
-        tvResultado         = findViewById(R.id.tvResultado);
-        spiOpcoes           = findViewById(R.id.spiOpcoes);
-        imgOperacao         = findViewById(R.id.imgOperacao);
-        imgIgual            = findViewById(R.id.imgIgual);
-        btnCalcular         = findViewById(R.id.btnCalcular);
+        edtOperando1 = findViewById(R.id.edtOperando1);
+        edtOperando2 = findViewById(R.id.edtOperando2);
+        tvOpcao = findViewById(R.id.tvOpcao);
+        tvResultado = findViewById(R.id.tvResultado);
+        spiOpcoes = findViewById(R.id.spiOpcoes);
+        imgOperacao = findViewById(R.id.imgOperacao);
+        imgIgual = findViewById(R.id.imgIgual);
+        btnCalcular = findViewById(R.id.btnCalcular);
 
         //Cria/instancia os elementos contidos no strings.xml; Lista de operações matemáticas criada;
         ArrayAdapter<String> adapterOpcoesMatematicas = new ArrayAdapter<String>(this
@@ -72,36 +71,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 //Pega a opção selecionada no SPINNER
                 String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
 
-                if(opcaoSelecionada.isEmpty()){
+                if (opcaoSelecionada.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Por favor, escolha uma operação matemática!", Toast.LENGTH_SHORT).show();
 
-                } else if(edtOperando1.getText().toString().isEmpty()){
+                } else if (edtOperando1.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "Por favor, insira um valor! ", Toast.LENGTH_SHORT).show();
 
-                } else if(edtOperando2.getText().toString().isEmpty()) {
+                } else if (edtOperando2.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "Por favor, insira um valor!", Toast.LENGTH_SHORT).show();
 
-                } else if(opcaoSelecionada == DIVISAO){
+                } else if (opcaoSelecionada.equals(DIVISAO)) {
+                    tvResultado.setText(divisao());
 
-                } else if(opcaoSelecionada == MULTIPLICACAO){
+                } else if (opcaoSelecionada.equals(MULTIPLICACAO)) {
+                    tvResultado.setText(multiplicacao());
 
-                } else if(opcaoSelecionada == SOMA){
+                    //equals() é um compara objetos
+                } else if (opcaoSelecionada.equals(SOMA)) {
+                    tvResultado.setText(somar());
 
-                } else if(opcaoSelecionada == SUBTRACAO){
+                } else if (opcaoSelecionada.equals(SUBTRACAO)) {
+                    tvResultado.setText(subtrair());
 
                 }
 
-
-
             }
         });
-
-
-
-
-
-
-
 
 
     }
@@ -116,17 +111,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         imgOperacao.setVisibility(View.VISIBLE);
 
-        if(adapterView.getItemAtPosition(i).toString().equals(DIVISAO)) {
+        if (adapterView.getItemAtPosition(i).toString().equals(DIVISAO)) {
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.divisao, getTheme()));
+            edtOperando1.setHint("dividendo");
+            edtOperando2.setHint("divisor");
+            tvResultado.setHint("quociente");
 
-        } else if(adapterView.getItemAtPosition(i).toString().equals(MULTIPLICACAO)){
+        } else if (adapterView.getItemAtPosition(i).toString().equals(MULTIPLICACAO)) {
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.multiplica, getTheme()));
+            edtOperando1.setHint("fator");
+            edtOperando2.setHint("fator");
+            tvResultado.setHint("produto");
 
-        } else if(adapterView.getItemAtPosition(i).toString().equals(SOMA)){
+        } else if (adapterView.getItemAtPosition(i).toString().equals(SOMA)) {
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
+            edtOperando1.setHint("parcela");
+            edtOperando2.setHint("parcela");
+            tvResultado.setHint("total");
 
-        } else if (adapterView.getItemAtPosition(i).toString().equals(SUBTRACAO)){
+        } else if (adapterView.getItemAtPosition(i).toString().equals(SUBTRACAO)) {
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
+            edtOperando1.setHint("minuendo");
+            edtOperando2.setHint("subtraendo");
+            tvResultado.setHint("diferença");
 
         } else {
             Log.d(TAG, "Nenhuma opção foi selecionada");
@@ -139,13 +146,53 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-    public String somar(){
-        String resultado = "";
+    private String somar() {
 
-        
+        int n1  = Integer.valueOf(edtOperando1.getText().toString()).intValue();
+        int n2  = Integer.valueOf(edtOperando2.getText().toString()).intValue();
+        int res = n1 + n2;
 
+        String resultado = Integer.toString(res);
 
-        return resultado;
+        return "O resultado da operação matemática é: " + resultado;
+    }
+
+    private String subtrair() {
+
+        int n1  = Integer.valueOf(edtOperando1.getText().toString()).intValue();
+        int n2  = Integer.valueOf(edtOperando2.getText().toString()).intValue();
+        int res = n1 - n2;
+
+        String resultado = Integer.toString(res);
+
+        return "O resultado da operação matemática é: " + resultado;
+    }
+
+    private String multiplicacao() {
+
+        int n1  = Integer.valueOf(edtOperando1.getText().toString()).intValue();
+        int n2  = Integer.valueOf(edtOperando2.getText().toString()).intValue();
+        int res = n1 * n2;
+
+        String resultado = Integer.toString(res);
+
+        return "O resultado da operação matemática é: " + resultado;
+    }
+
+    private String divisao() {
+
+        int n1  = Integer.valueOf(edtOperando1.getText().toString()).intValue();
+        int n2  = Integer.valueOf(edtOperando2.getText().toString()).intValue();
+        int res = n1 / n2;
+
+        String resultado = Integer.toString(res);
+
+        return "O resultado da operação matemática é: " + resultado;
+
+    }
+
+    private void validarOperacao(){
+
 
 
     }
