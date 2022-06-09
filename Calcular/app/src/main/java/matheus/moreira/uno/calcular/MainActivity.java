@@ -24,7 +24,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private static final String MULTIPLICACAO   = "Multiplicar";
     private static final String SOMA            = "Somar";
     private static final String SUBTRACAO       = "Subtrair";
+    private static final String RAIZQUADRADA    = "Raiz Quadrada";
+    private static final String LOGARITMO       = "Logaritmo";
+    private static final String POTENCIACAO     = "Potenciação";
+    private static final String POTENCIADE10    = "Potencia de 10";
     private int ZERO                            = 0;
+    private int BASEDEZ                         = 10;
     private EditText edtOperando1, edtOperando2;
     private TextView tvOpcao, tvResultado;
     private Spinner spiOpcoes;
@@ -92,8 +97,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     tvResultado.setText(divisao());
                     }
 
+                } else if(opcaoSelecionada.equals(LOGARITMO)){
+                    tvResultado.setText(logaritmo());
+
                 } else if (opcaoSelecionada.equals(MULTIPLICACAO)) {
                     tvResultado.setText(multiplicacao());
+
+                } else if(opcaoSelecionada.equals(POTENCIACAO)) {
+                    tvResultado.setText(potenciacao());
+
+                } else if(opcaoSelecionada.equals(POTENCIADE10)) {
+                    tvResultado.setText(potenciaDe10());
 
                     //equals() é um compara objetos
                 } else if (opcaoSelecionada.equals(SOMA)) {
@@ -102,6 +116,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 } else if (opcaoSelecionada.equals(SUBTRACAO)) {
                     tvResultado.setText(subtrair());
 
+                } else if(opcaoSelecionada.equals(RAIZQUADRADA)){
+                    tvResultado.setText(raizQuadrada());
                 }
 
             }
@@ -146,6 +162,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtOperando2.setHint("fator");
             tvResultado.setHint("produto");
 
+        } else if (adapterView.getItemAtPosition(i).toString().equals(POTENCIACAO)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.potenciacao, getTheme()));
+            edtOperando1.setHint("base");
+            edtOperando2.setHint("expoente");
+            tvResultado.setHint("resultado");
+
         } else if (adapterView.getItemAtPosition(i).toString().equals(SOMA)) {
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
             edtOperando1.setHint("parcela");
@@ -158,6 +180,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtOperando2.setHint("subtraendo");
             tvResultado.setHint("diferença");
 
+        } else if (adapterView.getItemAtPosition(i).toString().equals(RAIZQUADRADA)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz, getTheme()));
+            edtOperando2.setHint("informe o valor");
+            tvResultado.setHint("resultado");
         } else {
             Log.d(TAG, "Nenhuma opção foi selecionada");
         }
@@ -216,13 +242,60 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private String raizQuadrada(){
 
-        double n1 = Double.valueOf(edtOperando1.getText().toString()).intValue();
         double n2 = Double.valueOf(edtOperando2.getText().toString()).intValue();
-        double res = 
+        double res = Math.sqrt(n2);
 
+        String resultado = Double.toString(res);
 
+        return "O resultado da operação matemática é: " + resultado;
 
     }
+
+    private String logaritmo(){
+
+        double n2 = Double.valueOf(edtOperando2.getText().toString()).intValue();
+        double res = Math.log(n2);
+
+        String resultado = Double.toString(res);
+
+        return "O resultado da operação matemática é: " + resultado;
+
+    }
+
+    private String potenciacao() {
+
+        double n1 = Double.valueOf(edtOperando1.getText().toString()).intValue();
+        double n2 = Double.valueOf(edtOperando2.getText().toString()).intValue();
+        double res = Math.pow(n1, n2);
+
+        String resultado = Double.toString(res);
+
+        return "O resultado da operação matemática é: " + resultado;
+
+    }
+
+    private String potenciaDe10() {
+
+        double n2 = Double.valueOf(edtOperando2.getText().toString()).intValue();
+        double res = Math.pow(BASEDEZ, n2);
+
+        String resultado = Double.toString(res);
+
+        return "O resultado da operação matemática é: " + resultado;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
