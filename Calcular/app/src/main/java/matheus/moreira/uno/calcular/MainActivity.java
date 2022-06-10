@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private static final String RAIZQUADRADA    = "Raiz Quadrada";
     private static final String LOGARITMO       = "Logaritmo";
     private static final String POTENCIACAO     = "Potenciação";
-    private static final String POTENCIADE10    = "Potencia de 10";
+    private static final String POTENCIADE10    = "Potência de 10";
     private int ZERO                            = 0;
     private int BASEDEZ                         = 10;
     private EditText edtOperando1, edtOperando2;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ImageView imgOperacao, imgIgual;
     private Button btnCalcular;
     private ImageButton btnLimpar;
+    private String opcaoSelecionada;
 
 
     @Override
@@ -79,10 +80,34 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 //Pega a opção selecionada no SPINNER
-                String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
+                 opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
 
                 if (opcaoSelecionada.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Por favor, escolha uma operação matemática!", Toast.LENGTH_SHORT).show();
+
+                } else if(opcaoSelecionada.equals(RAIZQUADRADA)){
+
+                    if (edtOperando2.getText().toString().isEmpty()) {
+                        Toast.makeText(MainActivity.this, "Por favor, insira um valor!", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                    tvResultado.setText(raizQuadrada()); }
+
+                } else if(opcaoSelecionada.equals(LOGARITMO)){
+
+                    if (edtOperando2.getText().toString().isEmpty()) {
+                        Toast.makeText(MainActivity.this, "Por favor, insira um valor!", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        tvResultado.setText(logaritmo()); }
+
+                } else if(opcaoSelecionada.equals(POTENCIADE10)) {
+
+                    if (edtOperando2.getText().toString().isEmpty()) {
+                        Toast.makeText(MainActivity.this, "Por favor, insira um valor!", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                    tvResultado.setText(potenciaDe10()); }
 
                 } else if (edtOperando1.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "Por favor, insira um valor! ", Toast.LENGTH_SHORT).show();
@@ -91,33 +116,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     Toast.makeText(MainActivity.this, "Por favor, insira um valor!", Toast.LENGTH_SHORT).show();
 
                 } else if (opcaoSelecionada.equals(DIVISAO)) {
+
                     if(validarDivisor() == false){
                         Toast.makeText(MainActivity.this, "O Divisor deve ser Diferente de ZERO!", Toast.LENGTH_SHORT).show();
                     } else{
                     tvResultado.setText(divisao());
                     }
 
-                } else if(opcaoSelecionada.equals(LOGARITMO)){
-                    tvResultado.setText(logaritmo());
-
-                } else if (opcaoSelecionada.equals(MULTIPLICACAO)) {
+                    //equals() é um compara objetos
+                }  else if (opcaoSelecionada.equals(MULTIPLICACAO)) {
                     tvResultado.setText(multiplicacao());
 
                 } else if(opcaoSelecionada.equals(POTENCIACAO)) {
                     tvResultado.setText(potenciacao());
 
-                } else if(opcaoSelecionada.equals(POTENCIADE10)) {
-                    tvResultado.setText(potenciaDe10());
-
-                    //equals() é um compara objetos
-                } else if (opcaoSelecionada.equals(SOMA)) {
+                }  else if (opcaoSelecionada.equals(SOMA)) {
                     tvResultado.setText(somar());
 
                 } else if (opcaoSelecionada.equals(SUBTRACAO)) {
                     tvResultado.setText(subtrair());
 
-                } else if(opcaoSelecionada.equals(RAIZQUADRADA)){
-                    tvResultado.setText(raizQuadrada());
                 }
 
             }
@@ -126,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 edtOperando1.setText("");
                 edtOperando2.setText("");
                 tvResultado.setText("");
@@ -139,6 +158,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
         //Toast.makeText(this, adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
+
+
 
 
         imgOperacao.setVisibility(View.VISIBLE);
@@ -156,6 +177,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtOperando2.setHint("divisor");
             tvResultado.setHint("quociente");
 
+        } else if (adapterView.getItemAtPosition(i).toString().equals(LOGARITMO)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.log, getTheme()));
+            edtOperando1.setKeyListener(null);
+            edtOperando2.setHint("Informe a base do logaritmo");
+            tvResultado.setHint("logaritmo");
+
         } else if (adapterView.getItemAtPosition(i).toString().equals(MULTIPLICACAO)) {
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.multiplica, getTheme()));
             edtOperando1.setHint("fator");
@@ -164,9 +191,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         } else if (adapterView.getItemAtPosition(i).toString().equals(POTENCIACAO)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.potenciacao, getTheme()));
-            edtOperando1.setHint("base");
-            edtOperando2.setHint("expoente");
-            tvResultado.setHint("resultado");
+            edtOperando1.setHint("informe a base");
+            edtOperando2.setHint("informe o expoente");
+            tvResultado.setHint("potência");
+
+        } else if (adapterView.getItemAtPosition(i).toString().equals(POTENCIADE10)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.pot10, getTheme()));
+            edtOperando1.setKeyListener(null);
+            edtOperando2.setHint("informe o expoente");
+            tvResultado.setHint("potência");
 
         } else if (adapterView.getItemAtPosition(i).toString().equals(SOMA)) {
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
@@ -181,12 +214,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             tvResultado.setHint("diferença");
 
         } else if (adapterView.getItemAtPosition(i).toString().equals(RAIZQUADRADA)){
-            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz, getTheme()));
-            edtOperando2.setHint("informe o valor");
-            tvResultado.setHint("resultado");
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raizquadrada, getTheme()));
+            edtOperando1.setKeyListener(null);
+            edtOperando2.setHint("informe o radicando");
+            tvResultado.setHint("raiz");
+
+
+
+
         } else {
-            Log.d(TAG, "Nenhuma opção foi selecionada");
+            //Log.d(TAG, "Nenhuma opção foi selecionada");
+            imgOperacao.setVisibility(View.INVISIBLE);
         }
+
+
 
     }
 
@@ -197,33 +238,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private String somar() {
 
-        int n1  = Integer.valueOf(edtOperando1.getText().toString()).intValue();
-        int n2  = Integer.valueOf(edtOperando2.getText().toString()).intValue();
-        int res = n1 + n2;
+        double n1  = Double.valueOf(edtOperando1.getText().toString()).intValue();
+        double n2  = Double.valueOf(edtOperando2.getText().toString()).intValue();
+        double res = n1 + n2;
 
-        String resultado = Integer.toString(res);
+        String resultado = Double.toString(res);
 
         return "O resultado da operação matemática é: " + resultado;
     }
 
     private String subtrair() {
 
-        int n1  = Integer.valueOf(edtOperando1.getText().toString()).intValue();
-        int n2  = Integer.valueOf(edtOperando2.getText().toString()).intValue();
-        int res = n1 - n2;
+        double n1  = Double.valueOf(edtOperando1.getText().toString()).intValue();
+        double n2  = Double.valueOf(edtOperando2.getText().toString()).intValue();
+        double res = n1 - n2;
 
-        String resultado = Integer.toString(res);
+        String resultado = Double.toString(res);
 
         return "O resultado da operação matemática é: " + resultado;
     }
 
     private String multiplicacao() {
 
-        int n1  = Integer.valueOf(edtOperando1.getText().toString()).intValue();
-        int n2  = Integer.valueOf(edtOperando2.getText().toString()).intValue();
-        int res = n1 * n2;
+        double n1  = Double.valueOf(edtOperando1.getText().toString()).intValue();
+        double n2  = Double.valueOf(edtOperando2.getText().toString()).intValue();
+        double res = n1 * n2;
 
-        String resultado = Integer.toString(res);
+        String resultado = Double.toString(res);
 
         return "O resultado da operação matemática é: " + resultado;
     }
@@ -285,26 +326,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private  boolean  validarDivisor(){
         int  n2 = Integer.valueOf ( edtOperando2 . getText (). toString ());
         if ( n2 != ZERO ){
@@ -313,13 +334,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         } else {
             return false ;
         }
+
     }
-
-
-
-
-
-
 
 
 
