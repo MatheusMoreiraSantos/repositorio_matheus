@@ -20,7 +20,6 @@ public class MensagemFrag extends Fragment {
     }
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +29,7 @@ public class MensagemFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View layoutFragment = inflater.inflate(R.layout.fragment_mensagem, container, false);
-
 
 
         return layoutFragment;
