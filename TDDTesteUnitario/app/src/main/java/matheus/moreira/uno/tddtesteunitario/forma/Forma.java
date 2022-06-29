@@ -2,10 +2,10 @@ package matheus.moreira.uno.tddtesteunitario.forma;
 
 public abstract class Forma  {
     private double[] numeroDeMedidas;
-    private double TAMANHO_MAXIMO = 3;
+    private int TAMANHO_MAXIMO = 3;
 
 
-    public Forma(double numMedidas){
+    public Forma(int numMedidas){
         numeroDeMedidas = new double[numMedidas];
     }
 
@@ -17,9 +17,9 @@ public abstract class Forma  {
     public abstract double area();
 
 
-    public double getMedida(double posicao) {
+    public double getMedida(int posicao) {
 
-        if(i > 0 && i <= TAMANHO_MAXIMO){
+        if(posicao >= 0 && posicao <= TAMANHO_MAXIMO){
             return numeroDeMedidas[posicao];
         }else {
             throw new RuntimeException("Numero inválido p/ cálculo da área");
@@ -27,9 +27,11 @@ public abstract class Forma  {
 
     }
 
-    public void setMedidas(double posicao, double medida){
+    public void setMedidas(int posicao, double medida){
+
         numeroDeMedidas[posicao] = medida;
     }
 
 
+    public abstract double area(double resultado);
 }
