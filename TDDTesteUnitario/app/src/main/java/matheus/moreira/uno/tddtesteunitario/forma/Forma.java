@@ -6,6 +6,7 @@ public abstract class Forma  {
 
 
     public Forma(int numMedidas){
+
         numeroDeMedidas = new double[numMedidas];
     }
 
@@ -17,6 +18,7 @@ public abstract class Forma  {
     public abstract double area();
 
 
+    //Pega/acessa as medidas no array;
     public double getMedida(int posicao) {
 
         if(posicao >= 0 && posicao <= TAMANHO_MAXIMO){
@@ -27,6 +29,7 @@ public abstract class Forma  {
 
     }
 
+    //Grava medidas no array;
     public void setMedidas(int posicao, double medida){
 
         numeroDeMedidas[posicao] = medida;

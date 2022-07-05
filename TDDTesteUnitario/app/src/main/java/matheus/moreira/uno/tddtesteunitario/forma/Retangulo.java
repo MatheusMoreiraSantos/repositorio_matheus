@@ -3,16 +3,19 @@ package matheus.moreira.uno.tddtesteunitario.forma;
 public class Retangulo extends Forma {
 
 
-    public Retangulo(int numMedidas) {
-        super(numMedidas);
-    }
+    private static final int TAMANHO_ARRAY_INFO_CALCULO_AREA_RETANGULO = 2;
 
-    public Retangulo() {
+    /*public Retangulo(int numMedidas) {
+        super(numMedidas);
+    }*/
+
+    public Retangulo(){
+        super(TAMANHO_ARRAY_INFO_CALCULO_AREA_RETANGULO);
     }
 
     @Override
     public double area() {
-        return 0;
+        return getMedida(0) * getMedida(1);
     }
 
     @Override

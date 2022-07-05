@@ -13,6 +13,7 @@ public class Circunferencia extends Forma {
     }*/
 
     public Circunferencia(int i){
+
         super(TAMANHO_MAXIMO_ARRAY);
     }
 
