@@ -8,16 +8,17 @@ import static org.junit.Assert.*;
 import matheus.moreira.uno.tddtesteunitario.forma.Triangulo;
 
 public class TrianguloTest {
-    public static final double LADO_1               = 1;
-    public static final double LADO_2               = 2;
-    public static final double LADO_3               = 3;
+    public static final double LADO_1               = 5;
+    public static final double LADO_2               = 7;
+    public static final double LADO_3               = 9;
     public static final double SL                   = 6;
     public static final double DIFERENCA_ACEITAVEL  = 0.001;
     private static Triangulo triangulo              = new Triangulo();
-    public static final int POSICAO_ZERO_TRINGULO_LADO1  = 0;
-    public static final int POSICAO_UM_TRINGULO_LADO2    = 1;
-    public static final int POSICAO_DOIS_TRINGULO_LADO2  = 2;
-    //Quem gerencia a estrutura do arry é a classe pai Forma e os filhos, nesse caso a classe triangulo
+    public static final int TAMANHO_ARRAY_INFO_CALCULO_AREA = 3;
+    public static final int POSICAO_ZERO_TRINGULO_LADO1     = 0;
+    public static final int POSICAO_UM_TRINGULO_LADO2       = 1;
+    public static final int POSICAO_DOIS_TRINGULO_LADO3     = 2;
+    //Quem gerencia a estrutura do array é a classe pai Forma e os filhos, nesse caso a classe triangulo
     //informam quais são as posições e valores que devem ser armazenados;
 
 
@@ -60,11 +61,28 @@ public class TrianguloTest {
 
     }
 
-
-
     @Test
     public void deveriaCalcularAreaDoTriangulo(){
+        double calculoAreaDoTriangulo = 17.4123;
+        double DIFERENCA_ACEITAVEL = 0.001;
 
+        Triangulo triangulo = new Triangulo();
+
+        triangulo.setMedidas(POSICAO_ZERO_TRINGULO_LADO1, 5);
+        triangulo.setMedidas(POSICAO_UM_TRINGULO_LADO2, 7);
+        triangulo.setMedidas(POSICAO_DOIS_TRINGULO_LADO3, 9);
+
+        double x = (triangulo.getMedida(POSICAO_ZERO_TRINGULO_LADO1)
+                + triangulo.getMedida(POSICAO_UM_TRINGULO_LADO2)
+                + triangulo.getMedida(POSICAO_DOIS_TRINGULO_LADO3))/2;
+
+        double y = x * (x- triangulo.getMedida(POSICAO_ZERO_TRINGULO_LADO1))
+                           * (x - triangulo.getMedida(POSICAO_UM_TRINGULO_LADO2))
+                * (x - triangulo.getMedida(POSICAO_DOIS_TRINGULO_LADO3));
+
+        double area = Math.sqrt(y);
+
+        assertEquals("A area calculada no papel é:" + calculoAreaDoTriangulo, calculoAreaDoTriangulo, area, DIFERENCA_ACEITAVEL);
     }
 
 
