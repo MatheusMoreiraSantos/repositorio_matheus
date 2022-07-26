@@ -14,28 +14,6 @@ import androidx.room.PrimaryKey;
       , foreignKeys = {@ForeignKey(entity = Prova.class, parentColumns = "id",
               childColumns = "prova_id", onUpdate = CASCADE, onDelete = CASCADE)})
 
-
-
-
-
-
-
-
-/*@Entity(tableName = "tbl_aluno_prova"
-        , primaryKeys = {"aluno_id", "prova_id"}
-        , indices = {@Index(value = {"aluno_id"}), @Index(value = {"prova_id"})}
-        , foreignKeys = {@ForeignKey(entity = Aluno.class, parentColumns = "id",
-        childColumns = "aluno_id", onUpdate = CASCADE, onDelete = CASCADE)
-        , @ForeignKey(entity = Prova.class, parentColumns = "id",
-        childColumns = "prova_id", onUpdate = CASCADE, onDelete = CASCADE)})*/
-
-
-
-
-
-
-
-
 public class Pergunta {
     @PrimaryKey ()
     private int id, prova_id;

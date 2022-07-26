@@ -1,5 +1,17 @@
 package matheus.moreira.uno.morintegracaocomjava.database_app.tabelas;
 
+import static androidx.room.ForeignKey.CASCADE;
+
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Index;
+
+@Entity(tableName = "tbl_respostas"
+        , primaryKeys = {"id", "pergunta_id"}
+        , indices = {@Index(value = {"id"}), @Index(value = {"pergunta_id"})}
+        , foreignKeys = {@ForeignKey(entity = Pergunta.class, parentColumns = "id",
+        childColumns = "pergunta_id", onUpdate = CASCADE, onDelete = CASCADE)})
+
 public class Respostas {
     private int id, pergunta_id;
     private String resposta;

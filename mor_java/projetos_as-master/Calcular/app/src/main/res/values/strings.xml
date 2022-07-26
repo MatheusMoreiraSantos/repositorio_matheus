@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Calcular</string>
+    //Opções do Spinner da MainActivity
+    <string-array name="operacoes_matematicas">
+        <item> </item>
+        <item>Divisão</item>
+        <item>Exponenciação</item>
+        <item>Logaritmo</item>
+        <item>Multiplicação</item>
+        <item>Raiz Quadrada</item>
+        <item>Potência de 10</item>
+        <item>Soma</item>
+        <item>Subtração</item>
+    </string-array>
+</resources>

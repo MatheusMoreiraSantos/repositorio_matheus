@@ -25,7 +25,7 @@ public class AlunoProva {
 
     public AlunoProva(AlunoProva tblAlunoProva){
         this.aluno_id = tblAlunoProva.getAluno_id();
-        this.prova_id = tblAlunoProva.prova_id;
+        this.prova_id = tblAlunoProva.getProva_id();
     }
 
     public int getAluno_id() {

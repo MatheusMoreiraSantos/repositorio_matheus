@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Conceitos MOR</string>
+    <string name="btn_consulta_alunos">Consulta Alunos</string>
+    <string name="btn_consulta_provas">Consulta Provas</string>
+    <string name="btn_alunos_e_provas">Alunos e Provas</string>
+    <string name="btn_consultar_perguntas">Consulta Perguntas</string>
+    <string name="btn_consulta_respostas">Consulta Respostas</string>
+</resources>
