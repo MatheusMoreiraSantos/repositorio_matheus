@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnConsultaAlunos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btn_consulta_alunos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnConsultaProva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btn_consulta_provas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultaAlunos" />
+
+    <Button
+        android:id="@+id/btnAlunoProva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btn_alunos_e_provas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultaProva" />
+
+    <Button
+        android:id="@+id/btnPerguntas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btn_consultar_perguntas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlunoProva" />
+
+    <Button
+        android:id="@+id/btnResposta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btn_consulta_respostas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPerguntas" />
+
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/expandable_fab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/expandable_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:efab_closingAnticipateTension="0"
+            app:efab_color="@color/teal_700"
+            app:efab_icon="@drawable/ic_add"
+            app:efab_iconAnimationRotationDeg="-225" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fabOptionAluno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/laranja"
+            app:fab_icon="@drawable/ic_add"
+            app:label_backgroundColor="@color/cinza"
+            app:label_text="Alunos"
+            />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fabOptionProva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/tom_azul1"
+            app:fab_icon="@drawable/ic_add"
+            app:label_backgroundColor="@color/tom_azul2"
+            app:label_text="Provas" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fabOptionAlunoProva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/tom_verde1"
+            app:fab_icon="@drawable/ic_add"
+            app:label_backgroundColor="@color/tom_verde_musgo1"
+            app:label_text="Alunos e Provas" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fabOptionPergunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/cinza"
+            app:fab_icon="@drawable/ic_add"
+            app:label_backgroundColor="@color/red"
+            app:label_text="Perguntas" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/fabOptionResposta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/salmao1"
+            app:fab_icon="@drawable/ic_add"
+            app:label_backgroundColor="@color/teal_200"
+            app:label_text="Respostas" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
