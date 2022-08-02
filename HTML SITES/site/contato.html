@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title> Meus Site - Contato </title>
+        <link real = "icon" type="image/png" href="C:\Users\Alunos\Documents\Matheus Projetos Java\Google.png"> 
+
+    </head>
+
+    <body>
+        <a href = "index.html">
+            <b>| Home |</b>
+        </a>
+        <a href = "somos.html">
+            <b>| Quem Somos |</b>
+        </a>
+        <a href = "contato.html">
+            <b>| Contato | </b>
+        </a>
+
+
+    </body>
+
+<form>
+    <p>
+        Nome:<br>
+        <input type="text" size="40" name="Nome">
+    </p>
+    <p>
+        E-mail:<br>
+        <input type="text" size="40" name="Mail">
+    </p>
+    <p>
+        Comentário:<br>
+        <input type ="text" size="40" name="Comentário">
+    </p>
+    <p>
+        <input type="submit" name="btnEnviar" value="Enviar">
+        <input type="reset" name="btnApagar" value="Apagar">
+    </p>
+
+</form>
+
+<h2> Configuração </h2>
+<form action="ação.php" method="post">
+    Limiar:
+    <input type = "range" name="limiar" min="0" max="100" value="50">
+    <input type ="submit" value="Enviar">
+
+</form>
+
+<form name = "numero" id="num" method="get">
+    <input type="number" name="num" min="0" max="10" step="2">
+    <input type="submit" value="Enviar">
+
+</form>
+
+    <div align="center">
+        <form name = "calendario" id = "cadID" method="get">
+            Selecione uma Hora <input type="time" name="miHora" id="miHora">    
+            <input type="submit" value="Ok">
+        </form>
+    </div>
+
+    <div align = "rigth">
+        <form name = "formMes" id="Mes" method="get">
+            Selecione um mês: <input type="month" name="selMes" id="selMes">
+            <input type="submit" value="Ok">
+        </form>
+
+        <form name = "formMes" id="semana" method="get">
+            Selecione uma semana: <input type="week" name="selWeek" id="selWeek">
+            <input type="submit" value="Ok">
+        </form>
+    </div>
+
+    <div>
+        <form style="background-color: hsl(236, 57%, 41%);">
+            Selecione uma cor:
+            <input type="color" name="cor" id="Selcor">
+            <input type="submit" value="Ok">
+
+        </form>
+    </div>
+
+    <div>
+        <form style ="background-color:hsl(237, 43%, 90%)">
+            Esta é uma checkBox:
+            <input type="checkBox" name="cor" id="selcor">
+            <input type="checkBox" name="cor" id="selcor">
+            Este é um Radio Button
+            <input type = "radio" name="cor" id="selcor">
+            <input type = "submit" value="Ok">
+        </form>
+    </div>
+
+    <div>
+        <form style ="background-color:hwb(340, 32%, 3%)">
+            Seleciona Data, Hora:
+            <input type="datetime-local" name="dttm" id="dttm">
+            <input type="submit" value="Ok">
+        </form>
+    </div>
+
+    <div>
+        <span style="color: chartreuse">
+            <marquee behavior direction = "up">
+                <p align ="center">
+                    <b>
+                        Que a força esteja com você!
+                    </b>
+                </p>
+            </marquee>
+        </span>
+
+    </div>
+
+    
+
+
+
+ <div>
+
+    <span>
+        <marquee behavior="alternate" direction="left">
+            <img src = "C:\Users\Alunos\Documents\HTML\Millenium.png" width="150" height="100">
+        </marquee>
+
+
+    </span>
+
+</div>
+
+
+</html>
