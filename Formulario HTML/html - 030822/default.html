@@ -27,14 +27,14 @@
         <tr>
             <td align="center">
                 <a href="default.html">
-                    <img src="C:\Users\Alunos\Documents\GitHub\repositorio_matheus\Formulario HTML\html - 030822\img\iconeusuario2.jpg" width="42" height="36">
+                    <i class="fa fa-user-o" style="font-size: 48px; color:black"></i>
                     <br>
                     Usuário
                 </a>
             </td>
             <td align="center">
                 <a href="produtos.html">
-                    <img src="C:\Users\Alunos\Documents\GitHub\repositorio_matheus\Formulario HTML\html - 030822\img\iconeproduto2.jpg" width="40" height="33">
+                    <img src="C:\Users\Alunos\Documents\GitHub\repositorio_matheus\Formulario HTML\html - 030822\img\produtoicone.png" width="48" height="48">
                     <br>
                     Produto
                 </a>
@@ -50,19 +50,32 @@
                         <table cellspacing="10"> <!-- tamanho do campo -->
                             <tr>
                                 <td>
-                                    <label for="nome">Nome:</label>
+                                    <label for="nome">Nome: </label>
                                 </td>
                                 <td align="left">
                                     <input type="text" name="nome">
                                 </td>
                                 <td>
-                                    <label for="Sobrenome">Sobrenome:</label>
+                                    <label for="rg">RG:</label>
+                                </td>
+                                <td align="left">
+                                    <input type="text" name="rg" size="13" maxlength="13">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Sobrenome">Sobrenome: </label>
                                 </td>
                                 <td align="left">
                                     <input type="text" name="Sobrenome">
                                 </td>
-                            </tr>
-                            <tr>
+                                <td>
+                                    <label>CPF:</label>
+                                </td>
+                                <td align="left">
+                                    <input type="text" name="cpf" size="9" maxlength="9">-<input type="text" name="cpf" size="2" maxlength="2">
+                                </td>
+                                <tr>
                                 <td>
                                     <label> Data de Nascimento: </label>
                                 </td>
@@ -72,19 +85,6 @@
                                     <input type="text" name="ano" size="4" maxlength="4" value="aaaa">
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <label for="rg">RG:</label>
-                                </td>
-                                <td align="left">
-                                    <input type="text" name="rg" size="13" maxlength="13">
-                                </td>
-                                <td>
-                                    <label>CPF:</label>
-                                </td>
-                                <td align="left">
-                                    <input type="text" name="cpf" size="9" maxlength="9">-<input type="text" name="cpf" size="2" maxlength="2">
-                                </td>
                             </tr>
 
                         </table>
@@ -103,29 +103,34 @@
                                 <input type="text" name="rua">
                             </td>
                             <td>
-                                <label for="nome">Número:</label>
-                            </td>
-                            <td align="left">
-                                <input type="text" name="num">
-                            </td>
-                            <td>
                                 <label for="nome">Bairro:</label>
                             </td>
                             <td align="left">
                                 <input type="text" name="bairro">
                             </td>
+                            <tr>
+                                <td>
+                                    <label for="nome">Número:</label>
+                                </td>
+                                <td align="left">
+                                    <input type="text" name="num">
+                                </td>
+                                <td>
+                                    <label for="cep">CEP:</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+                                </td>
+                            </tr>
+                        <tr>
                             <td>
-                                <label for="cep">CEP:</label>
-                            </td>
-                            <td>
-                                <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
-                            </td>
-                        <tr>   
-                            <td>
-                                <label for="nome">Estado:</label>
+                                <label for="cidade">Cidade:</label>
                             </td>
                             <td align="left">
-                                <input type="text" name="est">
+                                <input type="text" name="cidade">
+                            </td>
+                            <td>
+                                <label for="nome">Estado:</label>
                             </td>
                             <td>
                             <select name="est" id="uf">
@@ -159,16 +164,8 @@
                             
                             </select>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="cidade">Cidade:</label>
-                            </td>
-                            <td align="left">
-                                <input type="text" name="cidade">
-                            </td>
                         </tr>    
-
+                        </tr>
                      </table>
                 </fieldset>
                 <br>
