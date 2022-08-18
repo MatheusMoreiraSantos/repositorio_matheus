@@ -2,9 +2,35 @@
     <head>
         <title>Cadastro</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+    <!--id sempre começa com #-->
+
         <style>
-            
+           
+           /*Selertor pela tag aplica-se a todas os H4 da sua página*/
+           h4{
+            color: red;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+           }
+
+           /*Seletor criado atraves de uma classe que deverá ser chamado na Class da tag. ex.: class="classe"*/
+           .classe{
+            font-family: sans-serif;
+            color: blue;
+           }
+
+           /*Seletor através da tag classe. só será aplicado quando for a tag citada antes do ponto
+           e chamado na class a classe apos o ponto*/
+           h4.classe{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: yellow;
+           }
+
+           /*Seletor com id deve ser chamado dentro do ID da tag. Ex.: id="p1"*/
+            #p{ 
+                font: 24px Verdana bold; 
+
+            }
+
             form{
                 font-family: Verdana, Geneva, sans-serif;
             }
@@ -40,6 +66,7 @@
         </style>
     
     </head>
+
     <body bgcolor="Moccasin">
 
     
@@ -202,7 +229,8 @@
     
              </form> 
     
-    
+    <h1 id="p">Um paragráfo</h1>
+
     </body> 
         
 </html>
