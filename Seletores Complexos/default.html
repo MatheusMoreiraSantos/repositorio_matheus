@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Seletores Complexos</title>
+
+        <style>
+            
+            body{
+                background-image: linear-gradient( white, );
+                background-repeat: no-repeat;
+                height: 100vh;
+                width: 100vh;
+            }
+            
+            ul li{ /*ul e li devem ser consecutivos, nesse caso altera todos os elementos de ambos*/
+                color: blue;
+            }
+
+            tr td{
+                color: green;
+            }
+
+            ul > li{
+                color: yellow;
+            }
+
+            tr > td{
+                color: green;
+            }
+
+            h1+p{
+                color: magenta;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <ul> <!--Lista-->
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+                <li>item 7</li>
+            </ul>
+        </div>
+<!--Seletor descendente Ex.: Seletor 2 descendente seletor 1-->
+        <table>
+            <tr>
+                <td>Coluna 1</td>
+            </tr>
+            <tr>
+                <td>Coluna 2</td>
+            </tr>
+            <tr>
+                <td>Coluna 3</td>
+            </tr>
+            <tr>
+                <td>Coluna 4</td>
+            </tr>
+        </table>
+        
+        <!--Seletor filho Ex.: Todo Seletor 2 deve ser filho de Seletor 1-->
+        <div>
+            <ul> <!--Lista-->
+                <a href="#"><li>item 1</li></a>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+                <li>item 7</li>
+            </ul>
+        </div>
+
+        <!---->
+        <table>
+            <tr>
+               <a href="#"><td>Coluna 1</td></a> 
+            </tr>
+            <tr>
+                <td>Coluna 2</td>
+            </tr>
+            <tr>
+                <td>Coluna 3</td>
+            </tr>
+            <tr>
+                <td>Coluna 4</td>
+            </tr>
+        </table>
+
+        <!--Seletor imediatamente seguinte Ex.: Todo Seletor 2 deve estar imediatamente abaixo do Seletor 1-->
+        <h1>Este é um exemplo de seletores filhos</h1>
+        <p>Este deve receber o CSS</p>
+
+
+
+
+    </body>
+
+</html>
