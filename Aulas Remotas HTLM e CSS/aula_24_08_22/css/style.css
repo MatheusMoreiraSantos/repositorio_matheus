@@ -1,0 +1,111 @@
+@media print and (max-width:480px) {
+    /*Informamos as propriedades*/
+}
+
+/* carrega o arquivo fancyfonts.css para a media tela */
+@import url("fancyfonts.css") screen;
+
+/* define a regra tamanho da fonte 10pt somente para a impressão */
+@media print{
+    body{font-size:13px}
+}
+
+@media screen, print{
+    body {line-height:1.2}
+}
+
+/* Regra de Definição de cor */
+@media sreen and (color){
+
+}
+
+/* condição and combinada com Or */
+@media sreen and (color), print and (color){
+
+}
+
+/* condição de acordo a orientação */
+@media all and (orientation:portrait){
+    /* Orientação Retratro */
+}
+
+@media all and (orientation:Landscape) {
+    /* Orientação Paisagem */
+}
+
+.body{
+    font-size: 16px;
+    background: lightgreen;
+    border: 1px solid darkgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+    .Class1 {
+        background: green;
+        margin: 10px;
+        padding: 10px;
+    }
+    .Class2 {
+        background: darkgreen;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+    }
+    .Class3{
+        background: darkolivegreen;
+        margin: 10px;
+        padding:10px;
+        color:white;
+    }
+
+@media screeen and (min-width: 900px) and (max-width: 1200px) {
+.body{
+  font-size: 20px;
+  background: lightblue;
+  border: 2px solid darkblue;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;  
+}    
+  .Class1 {
+    background: blue;
+  }
+
+  .Class2 {
+    grid-column: 1;
+    grid-row: 2;
+    background: darkblue;
+  }
+  
+  .Class3 {
+    grid-column: 2;
+    grid-row: 2;
+    background: aquamarine;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 899px) {
+    .body {
+     background: pink;
+     border: 3px solid darkred;
+     font-size: 24px;
+     display: flex;
+     flex-direction: column;
+     margin: 15px;
+     padding: 10px;   
+    }
+     .Class1 {
+        background: red;
+     }     
+     .Class2 {
+        background: darkred;
+     }
+     .Class3 {
+        background: indianred;
+     }
+}

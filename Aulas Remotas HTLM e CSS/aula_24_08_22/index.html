@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Type e Media Queries</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="Screen and NotColor">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Audiowide"> 
+
+</head>
+
+<body>
+    
+<!--Media Types: é quem define pra qual tipo de media o css será utilizado em seu site 
+para diferentes tipos de dispositivos, no geral teremos várias folhas de estlos, uma para
+cada dispositivo.-->
+
+<!--
+    All :Para todos os dispositivos.
+    Screen :Para monitores ou outros dispositivos com telas coloridas e com resolução adequada.
+    Handheld: Para dispositivos de mão. Normalmente com telas pequenas e banda limitada.
+    Embossed: Para dispositivos que “imprimem” em braille.
+    Tty: Para dispositivos que utilizam uma grade fixa para exibição de caracteres, como por exemplo,
+    teletypes, terminais, dispositivos portáteis com display limitado.
+    Print: Para impressão em papel.
+Braille: Para dispositivos táteis.
+    Projection: Para apresentações, como PowerPoint.
+    TV: Para dispositivos como televisores, ou seja, com baixa resolução, quantidade de cores e scroll limitado.
+    Speech: Para sintetizadores de voz.
+-->
+
+<!--Operadores Lógicos--> 
+
+<!--And-->
+<link rel="stylesheet" href="css/style.css" media="all and (not color)">
+<!--Only-->
+<link rel="stylesheet" href="css/style.css" media="only screen and (color)">
+<!--Or-->
+<link rel="stylesheet" href="css/style.css" media="screen and (color), projection and (color)">
+<!--Media Features reponsável por diferenciar os dispositivos-->
+<link rel="stylesheet" href="css/style.css" media="screen and (max-width:480px)">
+<!--o css será aplicado somente nos dispositivos de media e que suas telas possuam no máximo a resolução de 480px.-->
+
+   <!-- 
+        Caracteristicas utilizadas na verificação do dispostivo e seleção do css:
+        width
+        height
+        device-width
+        device-height
+        orientation
+        aspect-ratio
+        device-aspect-ratio
+        color
+        color-index
+        monochrome
+        resolution
+        scan
+        grid
+        -->
+    <div class="body">
+        <div class="Class1">
+           <h1>Media Queries CSS</h1>
+        </div>
+        <div class="Class2">
+           <p>Exemplo da Usabilidade</p>
+        </div>
+        <div class="Class3">
+           <p>Testanto as View Ports.</p>
+        </div>
+    </div>            
+ 
+</body>
+
+</html>
