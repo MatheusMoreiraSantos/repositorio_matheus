@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folhas de Estilos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Audiowide">
+</head>
+
+<body>
+    
+    <table>
+        <tr>
+            <td><a href="margin.html">Margin</a></td>
+            <td><a href="padding.html">Pading</a></td>
+            <td><a href="position.html">Position</a></td>
+            <td><a href="transition.html">Transition</a></td>
+        </tr>
+    </table>
+
+<!--É utilizada para realizar modificações em um elemento de forma gradativa-->
+
+<!--Transition-property: corresponde ao nome da propriedade que será modificado quando o processo de 
+    transição for iniciado;
+    transition-duration: determina o tempo para executar a transição;
+    transition-timing-function: indica o formato da transição entre o estado inicial e o final;
+    transition-delay: representa, em milissegundos, o tempo de espera para iniciar o processo de transição.-->
+
+    <div class="container">
+        <h1>CSS Transition</h1>
+        <br>
+        <div class="boxT ease">
+            Trasition ease - Padrão!
+        </div>
+        <br>
+        <div class="boxT linear">
+            Transition Linear!
+        </div>
+        <br>
+        <div class="boxT ease-in">
+            Transition ease-in!
+        </div>
+        <br>
+        <div class="boxT ease-out">
+            Transition ease-out!
+        </div>
+        <br>
+        <div class="boxT ease-in-out">
+            Transition ease-in-out!
+        </div>
+        <br>
+        <div class="boxT cubic-bezier">
+            Trasition cubic-bezier()!
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="OK" class="btn-ok grow">
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="reset" class="btn-rs shrink">
+        </div>
+        <br>
+    </div>
+    <br><br>
+    <div class="boxP rotate">
+        Rotação!
+    </div>
+    <br>
+    <div class="boxP circle">
+        Bordas!
+    </div>
+    <br>
+    <div class="boxP border">
+        Borda size!
+    </div>
+    <br><br>
+    <div class="elemento"></div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border: 3px solid blue;
+    color: aliceblue;
+    margin: 0 auto;
+    background: linear-gradient(120deg, white 30%, blue 100%);
+}
+
+imput{
+    border: 2px solid black;
+}
+
+.btn-cad{
+    border: 2px solid blue;
+}
+
+.btn-can{
+    background-color: red;
+}
+
+.grow:hover{
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.shrink:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1200px){
+    .container {
+        display:flex;
+        flex-direction: column;
+        width: 200px;
+        height: 200px;
+        border: 5px solid blue;
+        color: aliceblue;
+        margin: 0 auto; 
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,187,1) 100%);
+    }
+
+    imput{
+        border: 2px solid gray;
+    }
+    
+    .btn-cad{
+         background-color: yellow;
+    }
+    
+    .btn-can{
+        background-color: blue;
+    }
+    
+    .grow:hover{
+        -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    
+    .shrink:hover{
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .container {
+        display:flex;
+        flex-direction: column;
+        width: 200px;
+        height: 200px;
+        border: 3px solid blue;
+        color: aliceblue;
+        margin: 0 auto;
+        background: radial-gradient(circle, rgb(179, 251, 63) 60%, rgb(138, 78, 250) 80%);
+    }
+    
+    imput{
+        border: 2px solid black;
+    }
+    
+    .btn-cad{
+        background-color: rgb(178, 178, 250);
+    }
+    
+    .btn-can{
+        background-color: rgb(226, 132, 132);
+    }
+    
+    .grow:hover{
+        -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    
+    .shrink:hover{
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+    } 
+}
+
+.email{
+    transition: 4s;
+}
+
+.email:hover .container{
+    left: 50%;
+    -webkit-transition: Left 4s;
+    -moz-transition: Left 4s;
+    -ms-transition: Left 4s;
+    -o-transition: Left 4s;
+    transition: 4s;
+}
+
+.email .container.ease{
+    transition-timing-function: ease;
+}
