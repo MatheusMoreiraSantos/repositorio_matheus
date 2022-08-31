@@ -98,7 +98,6 @@
    }
    
    .header .logo img {
-     max-height: 40px;
      margin-right: 6px;
    }
    
@@ -112,6 +111,8 @@
    }
    
    .header .logo h1 span {
+     height: 258px;
+     width: 264px;
      color: #9ef513;
    }
    
@@ -123,11 +124,7 @@
      scroll-margin-top: 70px;
    }
 
-
-
-
-
-
+/*Código Template*/
 
 * {
      box-sizing: border-box !important;
@@ -486,6 +483,8 @@ ul.social_icon1 li:last-child {
 }
 
 .logo {
+     height: 210px;
+     width: 216px;
      text-align: center;
      display: block;
 }
@@ -507,6 +506,7 @@ ul.conta_icon li a {
      color: #271e0a;
      font-size: 17px;
      font-weight: 600;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 ul.conta_icon li a:hover {
