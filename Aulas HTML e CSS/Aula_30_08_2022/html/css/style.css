@@ -551,6 +551,7 @@ ul.conta_icon li a:hover {
 .navigation.navbar {
      float: left;
      padding: 0;
+     border: white;
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link {
@@ -609,7 +610,9 @@ ul.sign li a i {
 }
 
 .sign_btn:hover {
-     background-color: #000;
+     background-color: white;
+     text-shadow: 0 0 4px black;
+     
 }
 
 
@@ -617,28 +620,32 @@ ul.sign li a i {
 
 .banner_main {
      padding: 60px 0 0px 0;
-     background: url(../images/estante1.jpg);
+     background: url(../images/coruja.cap.logo4.png);
      background-size: 100% 100%;
      background-repeat: no-repeat;
+     height: 450px;
 }
 
 .text-bg {
      text-align: left;
-     padding-top: 120px;
+     padding-top: 30px;
 }
 
 .text-bg h1 {
-     color: #fff;
+     color: white;
+     text-shadow: 0 0 3.5px black;
+     text-align:left;
      font-size: 60px;
      line-height: 70px;
      font-weight: bold;
 }
 
 .text-bg span {
-     line-height: 28px;
+     line-height: 35px;
      padding-bottom: 20px;
      display: block;
      color: #f2db18;
+     text-shadow: 0 0 4px black;
      font-size: 30px;
      font-weight: 600;
 }
@@ -647,8 +654,9 @@ ul.sign li a i {
      line-height: 28px;
      padding-bottom: 70px;
      display: block;
-     color: #fff;
-     font-size: 17px;
+     color: white;
+     text-shadow: 0 0 4px black;
+     font-size: 28px;
 }
 
 .text-bg a {
@@ -691,7 +699,8 @@ ul.sign li a i {
 
 .titlepage h2 {
      font-size: 36px;
-     color: #154492;
+     color: black;
+     text-shadow: 0 0 1px white;
      line-height: 45px;
      font-weight: bold;
      padding: 0;
@@ -788,6 +797,7 @@ ul.sign li a i {
      font-size: 17px;
      font-weight: 600;
      color: #f2db18;
+     text-shadow: 0 0 0.3px black;
      line-height: 30px;
      padding-top: 25px;
      text-transform: uppercase;
@@ -817,8 +827,8 @@ ul.sign li a i {
      padding: 8px 0;
      margin-left: 40px;
      background-color: #f2db18;
-     max-width: 168px;
-     width: 100%;
+     max-width: 210px;
+     width: 120%;
      display: inline-block;
      text-align: center;
      font-size: 18px;
@@ -831,7 +841,7 @@ ul.sign li a i {
 }
 
 .about .read_morea:hover {
-     background-color: #000;
+     background-color: rgb(84, 100, 247);
 }
 
 
