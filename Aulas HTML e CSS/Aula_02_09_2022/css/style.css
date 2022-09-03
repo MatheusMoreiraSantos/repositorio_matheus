@@ -1,7 +1,60 @@
-.resumo{
-   margin-top: 0;
+body{
+   /*background-color: rgb(179, 164, 248);*/
+   background: linear-gradient(to right, rgb(151, 129, 247), rgb(123, 241, 133), navy);
+   background-size: 500% 100%;
+   animation-name: degrade;
+   animation-duration: 6s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@keyframes degrade{
+
+   0%{background-position-x: 0%;}
+   100%{background-position-x: 100%;}
+}
+
+img{
+   position: fixed;
+   margin-top: 25px;
+   margin-left: 25px;
+   width: 120px;
+   height: 120px;
+   border-radius: 60px;
+}
+
+.container{
+   margin-top: -10px;
+   background-color: beige;
    position: relative;
    width: 800px;
    margin-left: 200px;
-   padding: 15px; 
+   padding: 15px;
+}
+
+h1{
+   color: black;
+   font-weight: bold;
+   text-align: center;
+}
+
+h3{
+   text-align: right;
+}
+
+h4{
+   color: black;
+   font-weight: bold;
+   text-align: center;
+   line-height: 6px;
+}
+
+.contato{
+   font-weight: bold;
+   line-height: 0px;
+}
+
+.titulos{
+   text-align: left;
 }
