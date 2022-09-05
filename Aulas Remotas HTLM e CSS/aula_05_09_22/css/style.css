@@ -1,0 +1,104 @@
+*{ 
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(../img/car1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.70;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 8;
+    left: 8;
+}
+
+header{
+    top: 0;
+    background-color: rgba(0,0,0, 0.6);
+    height: 80px;
+   
+}
+
+.img-logo{
+    width: 70px;
+    height: 80px;
+}
+
+.img-tb{
+    width: 380px;
+    height: 200px;
+}
+
+
+.sociais{
+    position: fixed;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+h1{
+    font-size: 42px;
+    color: red;
+    font-weight: bold;
+}
+
+h2{
+    color: red;
+    font-weight: bold;
+}
+
+
+h3{
+    color: aliceblue;
+    font-weight: bold;
+}
+
+table{
+    border: 4px solid rgb(233, 44, 44);
+    position: absolute;
+    margin: 0 auto;
+}
+
+footer{
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+}
+
+i{
+    color: red;
+}
+
+p{
+    font-size: 20px;
+    clor: red;
+    font-weight: bold;
+}
+
+h2{
+
+}
+
+.bem-vindo{
+
+}
+
+.btn{
+    border-radius: 30px;
+    padding: 17px 40px;
+    font-weight: 800;
+    border-color: red;
+    background-color: rgba(0,0,0, 0.7);
+    text-decoration: none;
+    text-transform: appercase;
+    display: inline;
+    margin: 20px 0;
+    
+
+}

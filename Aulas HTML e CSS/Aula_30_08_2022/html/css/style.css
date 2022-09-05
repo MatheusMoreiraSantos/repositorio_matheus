@@ -477,10 +477,19 @@ ul.social_icon1 li:last-child {
 }
 
 .header_midil {
-     background-color: white;
      width: 100%;
-     padding: 45px 0;
+     padding:50px;
 }
+
+.cabecalho_midil{
+     background: url(../images/arvore4.jpg);
+     width: 100%;
+     padding:630px 0 0px 0;
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+
+}
+
 
 .logo {
      height: 210px;
@@ -626,6 +635,14 @@ ul.sign li a i {
      height: 450px;
 }
 
+.oferta_banner{
+     padding: 60px 0 0px 0;
+     background: url(../images/o-um-anel.jpg);
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     height: 550px;
+}
+
 .text-bg {
      text-align: left;
      padding-top: 30px;
@@ -673,7 +690,7 @@ ul.sign li a i {
 .text-bg a::before {
      position: absolute;
      content: "";
-     top: 3px;
+     top: 0px;
      border-right: #ffff00 solid 1px;
      border-width: 90px;
      height: 1px;
@@ -887,7 +904,7 @@ ul.sign li a i {
 #ho_color:hover.service_box h3 {
      transition: ease-in all 0.5s;
      color: #f2db18;
-     border-bottom: #f2db18 solid 3px;
+     border-bottom: blue solid 3px;
 }
 
 .service .read_more {
@@ -942,6 +959,7 @@ ul.sign li a i {
 .portfolio .portfolio_Carousel .carousel-caption {
      position: inherit;
      padding: 0;
+     
 }
 
 .portfolio_box {
@@ -951,6 +969,9 @@ ul.sign li a i {
 
 .portfolio_img {
      margin-bottom: 30px;
+     height: 379px; 
+     width: 264px;
+     
 }
 
 .middle:hover {
@@ -1352,7 +1373,7 @@ ul.social_icont li a {
 
 .footer {
      padding-top: 90px;
-     background: url(../images/footer_bg.jpg);
+     background: url(../images/estante2.jpg);
      background-size: 100% 100%;
      background-repeat: no-repeat;
      text-align: center;
@@ -1367,6 +1388,7 @@ ul.social_icont li a {
      color: #fff;
      font-weight: 600;
      font-size: 20px;
+     text-shadow: 0 0 4px black;
      line-height: 30px;
      text-align: left;
      margin-bottom: 19px;
@@ -1381,9 +1403,10 @@ ul.location_icon li {
      font-size: 18px;
      line-height: 30px;
      color: #fff;
+     text-shadow: 0 0 4px black;
      text-align: left;
      padding-bottom: 26px;
-     float: left;
+    
      padding-right: 13px;
 }
 
@@ -1429,7 +1452,7 @@ ul.social_icon li a {
 
 ul.social_icon li a:hover {
      background: #eed818;
-     color: #fff;
+     color: black;
 }
 
 ul.link_icon li {
@@ -1522,6 +1545,15 @@ ul.img_icon li {
 
 .copyright a:hover {
      color: #fff;
+}
+
+.nome{
+    color: white;
+     text-shadow: 0 0 3.5px black;
+     text-align:left;
+     font-size: 60px;
+     line-height: 70px;
+     font-weight: bold; 
 }
 
 
