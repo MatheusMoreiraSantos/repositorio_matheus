@@ -1,0 +1,220 @@
+body{
+    margin: 0 auto;
+    width: 940px;
+    font: 13px/22px Helvetica, Arial,sans-serif;
+    background: white;
+}
+
+h1, h2, h3{
+    text-align: left;
+}
+
+h2{
+    font-size: 28px;
+    line-height:5px;
+    padding: 2px 0;
+}
+
+h3{
+    font-size: 15px;
+    line-height:5px;
+    padding: 2px 0;
+}
+
+.intro{
+    border: 1px solid #999999;
+    text-align: left;
+    margin-top: 6px;
+    padding-left: 15px;
+    border-radius: 25px;
+    background-image: -o-linear-gradient(45deg #ffff, #0099); /*Deg: para que lado o gradiente vai ser aplicado ou correr;*/
+    background-image: -webkit-linear-gradient(45deg #ffff, #999);
+    background-image: Linear-gradient(45deg #ffff, #999);
+}
+
+nav{
+    left: 0;
+    background: #002366;
+}
+
+nav ul{
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    margin-right: 20px;
+    width: 140px;
+    font-size: 40px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: #cccccc;
+}
+
+nav ul li a:hover{
+    color: #fff;
+}
+
+#contentArea{
+    display: Cubic;
+}
+
+#mainContent{
+    display: table-cell !important;padding-right: 2px;
+}
+
+.rounded{
+    border: 2px;
+    border-color: #999999;
+    border-radius: 25px;
+    padding: 24px;
+}
+
+.featureContent{
+    background-color: #c0c0c0;
+    border: 1px solid #999999;
+    padding: 15px 15px 15px 15px;
+}
+
+.otherContent{
+    background-color: #c0c0c0;
+    border: 1px solid #999999;
+    padding: 15px 15px 15px 15px;
+}
+
+article div{
+    text-align: justify;
+    padding: 6px;
+
+    -o-column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+
+    -o-column-gap: 20px;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}
+
+article img{
+    margin: 10px 0;
+    box-shadow: 3px 3px 12px #222;
+}
+
+.rotateContent{
+    -webkit-perspective: 600px;
+}
+
+.rotate{
+    -webkit-transform-style: preserve-3d;
+}
+
+p{
+    padding-bottom: 2px;
+}
+
+.book{
+    padding: 3px;
+}
+
+aside{
+    margin-top: 12px;
+    text-align: center;
+    background-color: #ddd;
+    display: table-cell;
+    width:280px;
+    box-shadow: 3px 3px 3px #c0c0c0;
+}
+
+.book img{
+    margin: 10px 0;
+    display: block;
+    box-shadow: 2px 2px 5px #444;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85px;
+    height: 85px;
+}
+
+#titulos article:nth-child(2n+1){
+    background-color: #c0c8c0;
+    border: 3px solid #6699cc;
+    border-radius: 30px;
+}
+
+#titulos article:nth-child(2n+0){
+    background-color: #6699cc;
+    border: 3px solid #c0c8c0;
+    border-radius: 30px;
+}
+
+#moon{
+    width: 115px;
+    height: 115px;
+    background-image: url(../img/allmoon.svg);
+    background-repeat: no-repeat;
+    -webkit-animation-name: moonPhases;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-iteration-count: 10;
+
+}
+
+@-webkit-keyframes moonPhases{
+    0%{background-image: url();}
+
+}
+
+
+
+/* Comandos para construir um gradient:
+ 
+to right → transição de cores na horizontal da esquerda para a direita;
+to left → transição de cores na horizontal da direita para a esquerda;
+to top → transição de cores na vertical de baixo para cima;
+to bottom → transição de cores na vertical de cima para baixo;
+to top left → transição de cores a partir do canto superior esquerdo em direção ao centro;
+to top right → transição de cores a partir do canto superior direito em direção ao centro;
+to bottom left → transição de cores a partir do canto inferior esquerdo em direção ao centro;
+to bottom right → transição de cores a partir do canto inferior direito em direção ao centro.
+
+Exs.:
+
+background-image: linear-gradient( to right, red, green, yellow, blue ); 
+background-image: linear-gradient( to right, red 50%, green 90%, yellow, blue );
+background-image: linear-gradient( to right, red 25%, green 25%, green 70%, yellow 70%, yellow 80%,);
+linear-gradient( to right, red, transparent, blue ); Transparent: algumas partes que não receberão cores;
+background-image:  linear-gradient( to right, red, transparent, blue ), url("Link da Imagem") center repeat-x;
+Aplica um gradiente sobre uma imagem, o centro fica transparente e as bordas recebem as cores;
+
+div1 { background:  linear-gradient( red 50px, green 50px, green 100px, yellow 100px, yellow 150px, blue 150px); }
+div2 { background:  linear-gradient( -110grad, red, green, yellow, blue ); }
+div3 { background:  linear-gradient( 4.5rad, red, green, yellow, blue ); }
+div4 { background:  linear-gradient( -0.2turn, red, green, yellow, blue ); }
+
+div { 
+	width: 500px;
+	padding-top: 280px;
+	background-image: linear-gradient( 115deg, #001669, #007296 1%, #007296 11%, #015673 15%, 
+    #000 23.57%, transparent 23.57%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #2d8427 23.57%, #205a06 41%, #000 45%,
+	transparent 45%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #e79a07 45%, #e79a07 50%, #e79a07 52%, 
+    #444 55%, transparent 45%, transparent 100% ),
+
+    linear-gradient( 109deg, transparent, #288ab1 55%, #288ab1 68%,  #000 73%, 
+    transparent 73%, transparent 100% ),
+	
+    linear-gradient( 109deg, transparent, #de491e 73%, #de491e 100% );
+}
+*/

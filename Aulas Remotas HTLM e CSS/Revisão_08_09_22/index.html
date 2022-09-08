@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<title>Aula 08/09/2022 - Manhã</title>
+
+</head>
+
+<body>
+    
+    <header class="intro">
+        <h1>CSS - Revisao</h1>
+        <h2>Utilizando HTML 5 com CSS</h2>
+        <h3>Com o uso do CSS 3 tornamos o projeto mas estiloso e elegante!</h3>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Article</a></li>
+            <li><a href="#">Archives</a></li>
+            <li><a href="#">Apress</a></li>
+        </ul>
+    </nav>
+<!--Área de Conteúdo-->
+<div id="ContentArea">
+    <div id="mainContent">
+        <section class="rounded">
+            <header>
+                <h2>Conteúdo Principal</h2>
+            </header>
+            <p>Lorem ipsum dolor sit feugiat lide tornamos naso tierra 
+               com impacto nihil id ratione ea sunt quis dolorem dolore  
+               earum</p>
+        </section>
+
+        <section>
+            <article class="featureContent">
+                <header>
+                    <h2>Featured Article</h2>
+                </header>
+                <div>
+                    <p>Lorem ipsum dolor sit amet lide</p>
+                    <img src="img/toppng.com-thumbs-up-image-royalty-free-download-thumbs-up-clipart-1990x2400.png" height="85px" width="85px" alt="" class="rotate">
+                    <input type="range" min="-100" max="108" value="0" step="18" oncharge="rotateImage(this.value)">
+                <br>
+                <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                   id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                   pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                   a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                   ac convallis ligula tristique. Nam nec blandit sem, non varius libero.
+                </p>
+                <p>
+                    Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                   id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                   pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                   a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                   ac convallis ligula tristique. Nam nec blandit sem, non varius libero.
+                </p>
+                <p>
+                    Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                   id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                   pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                   a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                   ac convallis ligula tristique. Nam nec blandit sem, non varius libero.
+                </p>
+                </div>
+            </article>
+            <!--Conteúdo Outro-->
+            <article class="otherContent">
+                <a id="feature"></a>
+                <header>
+                    <h3>Bordas Arredondadas</h3>
+                </header>
+                <div>
+                    <p>Detalhes sobre Bordas</p>
+                    
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+                    
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>  
+                </div>
+            </article>
+            <article>
+                <a id="other"></a>
+                <header>
+                    <h3>Outros Assuntos</h3>
+                </header>
+                <div>
+                    <p>Detalhes sobre Bordas</p>
+                    
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+            </div>
+            </article>
+        </section>
+    
+        <aside id="sidebar">
+            <h1>Outros Títulos</h1>
+            <div id="moon"></div>
+            <p>Cheque a Seção Apress para mais títutlos disponíveis</p>
+            <section id="titulos">
+                <article class="book">
+                    <header>
+                        <a href="http://www.apress.com/9781430240747"><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp"></a> 
+                    </header>
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+                </article>
+                <article class="book">
+                    <header>
+                        <a href="http://www.apress.com/9781430240747"><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp"></a> 
+                    </header>
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+                </article>
+                <article class="book">
+                    <header>
+                        <a href="http://www.apress.com/9781430240747"><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp"></a> 
+                    </header>
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+                </article>
+                <article class="book">
+                    <header>
+                        <a href="http://www.apress.com/9781430240747"><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp"></a> 
+                    </header>
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+                </article>
+                <article class="book">
+                    <header>
+                        <a href="http://www.apress.com/9781430240747"><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp"></a> 
+                    </header>
+                    <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                        id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                        pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                        a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                        ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+                </article>
+            </section>
+
+
+        </aside>
+    
+    
+    
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
