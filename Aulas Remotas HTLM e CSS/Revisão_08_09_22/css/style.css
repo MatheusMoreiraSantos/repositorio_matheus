@@ -27,14 +27,16 @@ h3{
     margin-top: 6px;
     padding-left: 15px;
     border-radius: 25px;
-    background-image: -o-linear-gradient(45deg #ffff, #0099); /*Deg: para que lado o gradiente vai ser aplicado ou correr;*/
-    background-image: -webkit-linear-gradient(45deg #ffff, #999);
-    background-image: Linear-gradient(45deg #ffff, #999);
+    background-image: -o-linear-gradient(45deg, #ffffff, #6699cc); /*Deg: para que lado o gradiente vai ser aplicado ou correr;*/
+    background-image: -webkit-linear-gradient(45deg, #ffffff, #6699cc);
+    background-image: Linear-gradient(45deg, #ffffff, #6699cc);
 }
 
 nav{
     left: 0;
-    background: #002366;
+    height: 30px;
+    background: #003366;
+    border-radius: 15px;
 }
 
 nav ul{
@@ -50,7 +52,7 @@ nav ul li a{
     display: block;
     margin-right: 20px;
     width: 140px;
-    font-size: 40px;
+    font-size: 14px;
     line-height: 28px;
     text-align: center;
     padding-bottom: 2px;
@@ -63,17 +65,18 @@ nav ul li a:hover{
 }
 
 #contentArea{
-    display: Cubic;
+    display: table;
 }
 
 #mainContent{
-    display: table-cell !important;padding-right: 2px;
+    display: table-cell;
+    padding-right: 2px;
 }
 
 .rounded{
-    border: 2px;
+    border: 1px solid;
     border-color: #999999;
-    border-radius: 25px;
+    border-radius: 12px;
     padding: 24px;
 }
 
@@ -106,7 +109,7 @@ article div{
 
 article img{
     margin: 10px 0;
-    box-shadow: 3px 3px 12px #222;
+    box-shadow: 2px 2px 5px #222;
 }
 
 .rotateContent{
@@ -118,20 +121,23 @@ article img{
 }
 
 p{
-    padding-bottom: 2px;
+    padding: 2px;
 }
 
 .book{
-    padding: 3px;
+    padding: 5px;
 }
 
 aside{
     margin-top: 12px;
     text-align: center;
-    background-color: #ddd;
+    background-color: #6699cc;
     display: table-cell;
-    width:280px;
-    box-shadow: 3px 3px 3px #c0c0c0;
+    width:200px;
+    box-shadow: 3px 3px 3px #aaaaaa;
+    padding: 5px 5px 5px 5px;
+    border-radius: 12px;
+    border: 1px solid #999999;
 }
 
 .book img{
@@ -140,7 +146,7 @@ aside{
     box-shadow: 2px 2px 5px #444;
     margin-left: auto;
     margin-right: auto;
-    width: 85px;
+    width: 75px;
     height: 85px;
 }
 
@@ -157,10 +163,13 @@ aside{
 }
 
 #moon{
-    width: 115px;
-    height: 115px;
+    width: 160px;
+    height: 160px;
     background-image: url(../img/allmoon.svg);
     background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-animation-name: moonPhases;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 3s;
@@ -169,9 +178,32 @@ aside{
 }
 
 @-webkit-keyframes moonPhases{
-    0%{background-image: url();}
-
+    0%{background-image: url(../img/1.svg);}
+    25%{background-image: url(../img/2.svg);}
+    50%{background-image: url(../img/3.svg);}
+    100%{background-image: url(../img/4.svg);}
 }
+
+.rotateContainer{
+    -webkit-perspective: 600px;
+}
+
+footer{
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #ddd;
+}
+
+footer p{
+    padding: 10px;
+}
+
+
+
+
+
+
 
 
 

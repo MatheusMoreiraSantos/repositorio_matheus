@@ -25,10 +25,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <nav>
         <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Article</a></li>
-            <li><a href="#">Archives</a></li>
-            <li><a href="#">Apress</a></li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#other">Article</a></li>
+            <li><a href="#another">Archives</a></li>
+            <li><a href="#http://www.apress.com">Apress</a></li>
         </ul>
     </nav>
 <!--Área de Conteúdo-->
@@ -45,10 +45,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <section>
             <article class="featureContent">
+                <a id="feature"></a> 
                 <header>
                     <h2>Featured Article</h2>
                 </header>
-                <div>
+                <!--Rotação-->
+                <div class="rotateContainer">
                     <p>Lorem ipsum dolor sit amet lide</p>
                     <img src="img/toppng.com-thumbs-up-image-royalty-free-download-thumbs-up-clipart-1990x2400.png" height="85px" width="85px" alt="" class="rotate">
                     <input type="range" min="-100" max="108" value="0" step="18" oncharge="rotateImage(this.value)">
@@ -97,7 +99,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>  
                 </div>
             </article>
-            <article>
+            <article class="otherContent">
                 <a id="other"></a>
                 <header>
                     <h3>Outros Assuntos</h3>
@@ -112,8 +114,24 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
             </div>
             </article>
+        </article>
+        <article class="otherContent">
+            <a id="another"></a>
+            <header>
+                <h3>Outros Assuntos</h3>
+            </header>
+            <div>
+                <p>Detalhes sobre Bordas</p>
+                
+                <p>Nulla finibus eros risus, a mattis magna placerat ut. Suspendisse hendrerit neque sapien, 
+                    id feugiat libero pellentesque at. Etiam risus mi, vulputate eget magna sed, ullamcorper 
+                    pretium est. Maecenas sollicitudin eros suscipit, aliquet lacus eu, vulputate velit. Quisque 
+                    a sem mauris. Suspendisse potenti. Proin ut interdum erat. Nunc vestibulum risus in metus mattis, 
+                    ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
+        </div>
+        </article>
         </section>
-    
+    </div>
         <aside id="sidebar">
             <h1>Outros Títulos</h1>
             <div id="moon"></div>
@@ -170,14 +188,15 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         ac convallis ligula tristique. Nam nec blandit sem, non varius libero</p>
                 </article>
             </section>
-
-
         </aside>
-    
-    
-    
-    
     </div>
+
+    <footer>
+        <p>
+            Last update <time dateline="2022-09-09T08:38:22-03:00">Set 09 2022</time>
+        </p>
+    </footer>
+
 </div>
 
 
