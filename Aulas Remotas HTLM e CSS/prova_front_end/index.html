@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+ 
+      <!--Menu-->
+    <header class="header">
+        <nav>
+          <a href="#"><img src="../prova_front_end/img/Screenshot_1.png" height="49" width="180"></a>
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fa fa-user"></i> Cliente</a></li>
+                <li><a href="produto.html"><i class="fa fa-box"></i> Produto</a></li>
+            </ul>
+        </nav>
+        <br><br><br>
+      </header>
+
+<!--Formulário-->      
+<div class="container">
+    <div class="container2"> 
+        <div class="form-image">
+            <img src="img/undraw_preferences_re_49in.svg" alt="">
+        </div>
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastro de Clientes</h1>
+                    </div>
+                </div>
+                <br>
+                <legend><b>Dados Pessoais e/ou Dados da Empresa</b></legend>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nome">Nome Completo: </label>
+                        <input type="text" name="nome" id="nome" placeholder="seu nome">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cpf">CPF: </label>
+                        <input type="text" name="cpf" size="12" maxlength="12" placeholder="xxx.xxx.xxx-xx">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="data de nascimento">Data de Nascimento: </label>
+                        <input type="text" name="dia" size="2" maxlength="2" placeholder="dd">
+                        <input type="text" name="mes" size="2" maxlength="2" placeholder="mm">
+                        <input type="text" name="ano" size="4" maxlength="4" placeholder="aaaa"> 
+                    </div>
+
+                    <div class="input-box">
+                        <label for="nome fantasia">Nome Fantasia: <label>
+                        <input type="text" name="nf" id="nf" placeholder="nome da sua empresa">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="razao social">Razão Social: </label>
+                        <input type="text" name="rs" id="rs" placeholder="informe a razão social">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cnpj">CNPJ: </label>
+                        <input type="text" name="cnpj" size="16" maxlength="16" placeholder="xx.xxx.xxx/0001-xx">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="fundacao">Data de Fundação: </label>
+                        <input type="text" name="dia" size="2" maxlength="2" placeholder="dd">
+                        <input type="text" name="mes" size="2" maxlength="2" placeholder="mm">
+                        <input type="text" name="ano" size="4" maxlength="4" placeholder="aaaa">
+                    </div>
+
+                </div>
+            
+               <div class="continue-button">
+                    <button><a href="endereco.html">Próximo</a></button>
+               </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<footer>
+    <h3><i class="fa-solid fa-copyright"></i> Copyright organizações Soluções S.A - 
+        <i class="fa-solid fa-registered"></i> Todos os Direitos reservados</h3>
+</footer>
+
+</body>
+
+</html>
