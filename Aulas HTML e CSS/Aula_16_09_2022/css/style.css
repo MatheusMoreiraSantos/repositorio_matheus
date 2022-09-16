@@ -1,0 +1,51 @@
+#relogio{
+    font-size: 175px;
+    width: 100%;
+    margin: 200px;
+    text-align: center;
+    border: 10px solid red;
+    border-radius:20px;
+    background-color: black;
+    color: white;
+}
+
+.cronometro{
+    font-size: 100px;
+    width: 100%;
+    margin: 200px;
+    text-align: center;
+    border: 10px solid red;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.st {
+    background-color: green;
+    font-size: 60px;
+    color: aliceblue;
+    font-weight: bold;
+    border: 5px solid aliceblue;
+    border-radius: 20px;
+}
+
+.sp {
+    background-color: red;
+    font-size: 60px;
+    color: aliceblue;
+    font-weight: bold;
+    border: 5px solid aliceblue;
+    border-radius: 20px;
+}
+
+.rs {
+    background-color: orange;
+    font-size: 60px;
+    color: aliceblue;
+    font-weight: bold;
+    border: 5px solid aliceblue;
+    border-radius: 20px;
+}
