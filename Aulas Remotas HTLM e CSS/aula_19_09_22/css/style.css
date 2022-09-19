@@ -1,0 +1,38 @@
+body {
+    background-color: #003959;
+}
+
+.water {
+    max-width: 600px;
+    height: 500px;
+    position: relative;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/water.jpeg') no-repeat;
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.fish {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) translatez(50px); 
+    -moz-transform: translate(-50%, -50%) translatez(50px); 
+    -ms-transform: translate(-50%, -50%) translatez(50px); 
+    -o-transform: translate(-50%, -50%) translatez(50px); 
+    transform: translate(-50%, -50%) translatez(50px); 
+}
+
+@media (max-width: 768px){
+    .water{
+        height: 300px;
+    }
+    .fish{
+        max-width: 60%;
+    }
+}
