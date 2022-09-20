@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Eventos</title>
+    <!--CSS only-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/arquivo.js"></script>
+</head>
+
+<body onload="checkCookies()">
+    
+    <!--
+        onBlur => remove o foco do elemento;
+        onChange => muda o vaor do elemento;
+        onClick => o elemento é clicado pelo usuário;
+        onFocus => o elemento é focado;
+        onKeyPress => o usuário pressiona uma tecla sobre o elemento;
+        onLoad => carrega o elemento por completo;
+        onMouseOver => define ação quando o usuário passa o mouse sobre o elemento;
+        onMouseOut => define ação quando o usuário retira o mouse sobre o elemento;
+        onSubmit => define ação ao enviar um formulário;
+    -->
+
+   <!--Evento onClick-->
+   <h1 onclick="this.innerHTML='Isso acontece quando usamos o evento onClick!'"
+   >Clique nesse link para testar o evento onClick!</h1>
+   <br>
+   <!--Evento onLoad-->
+   <h2>onLoad</h2>
+   <p>Irá aparecer um alert dizendo se os cookies estão ou não liberados em seu navegador</p>
+   <br>
+<!--Evento onChange-->
+   Insira seu Nome: <input type="text" id="fname" onchange="myChange()">
+   <br>
+   <!--onMouseOver e onMouseOut--> 
+   <p>onMouseOver e onMouseOut</p>
+   <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+       style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+       Passe o mouse Aqui!
+   </div>
+   <br>
+<!--onmousedown, onmouseup e onclick-->
+   <p>onmousedown, onmouseup e onclick</p>
+   <div onmousedown="mDown(this)" onmouseup="mUp(this)"style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+       Clique aqui
+   </div>
+   <br>
+   <!--onFocus e onBluer-->
+   <p>onFocus e onBlur</p>
+   Clique dentro e fora:<input type="text" id="meuInput" onfocus="dentro()" onblur="fora()">
+
+
+
+</body>
+
+</html>
