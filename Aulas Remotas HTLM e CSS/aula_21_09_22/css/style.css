@@ -1,0 +1,30 @@
+h1 {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: goldenrod;
+}
+
+body {
+    background-image: url('../img/ceu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bola {
+    width: 80px;
+    height: 80px;
+    background-image: url('../img/ballon4.webp');
+    background-size: 120x 140px;
+    border-radius: 25px;
+    position: absolute;
+    
+}
+
+#score {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    font-size: 20px;
+    font-family: Tahoma;
+}
