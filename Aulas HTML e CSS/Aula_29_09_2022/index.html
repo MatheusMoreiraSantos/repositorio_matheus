@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop`s - Instruções de Repetição</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h2>Contanto de 1 até 10</h2>
+    <button onClick="contar1()" id="btn1">Conte de 1 a 10</button>
+    <section id="out1"><p>Clique no botão para iniciar a contagem</p></section>
+    <br>
+    <h2>Contagem de 1 a 10 - Marcando No. Pares</h2>
+    <button onClick="contar2()" id="btn2">Iniciar Contagem</button>
+    <section id="out2"><p>Clique no Botão para Iniciar a Contagem de N° Pares</p></section>
+    <br>
+    <h2>Contagem de 1 a 10 - Marcando Impares</h2>
+    <button onClick="contar3()" id="btn3">Iniciar Contagem</button>
+    <section id="out3"><p>Clique no Botão para Iniciar a Contagem de N° Impares</p></section>
+    <br>
+    <br>
+    <h2>Contagem Regressiva 10 -1</h2>
+    <button onClick="contar4()" id="btn4">Iniciar Contagem</button>
+    <section id="out4"><p>Clique no Botão para Iniciar a Contagem</p></section>
+    <br>
+    <h2>Contagem Inteligente</h2>
+        <p>Insira o valor inicial e final da contagem(Acendente ou Decrescente e Negativos)</p>
+        <section id="in">
+            <form action="#" method="get">
+                <p>
+                    <label for="fn1">Valor inicial:</label>
+                    <input type="text" name="n1" id="fn1" placeholder="inicio da contagem">
+                </p>
+
+                <p>
+                    <label for="fn2">Valor Final:</label>
+                    <input type="text" name="n2" id="fn2" placeholder="Fim da contagem">
+                </p>
+                
+                <p>
+                    <input type="submit" value="Contar" onClick="contagem5()">
+                </p>
+            </form>
+        </section>
+        <section id="out5">
+            <p>Insira as informações e Clique no Botão</p>
+        </section>
+        <br>
+        <h1>Super Tabuada</h1>
+            <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</p>
+            <section id="entrada">
+                <form action="#" method="get">
+                    <p>
+                        <label for="fnum">Número: </label>
+                        <input type="number" name="num" id="fnum" placeholder="Número: ">
+                        <input type="submit" value="Tabuada" formaction="javascript:tabuada()">
+                    </p>
+                </form>
+            </section>
+            <select id="saida">
+                
+            </select>
+
+
+
+    <script src="js/arquivo.js"></script>
+
+</body>
+
+</html>

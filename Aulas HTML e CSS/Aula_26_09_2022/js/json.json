@@ -1,0 +1,34 @@
+[
+    "Segunda", 
+    "Terça", 
+    "Quarta", 
+    "Quinta", 
+    "Sexta", 
+    "Sabado", 
+    "Domingo"
+]
+
+[ 33, "Segunda", true, 1.76 ]
+
+{
+    "Segunda"   :"Unochapeco",
+    "Terça"     :"Folga",
+    "Quarta"    : "Empresa",
+    "Quinta"    : "Folga",
+    "Sexta"     : "Unochapeco",
+    "Sabado"    : "Folga",
+    "Domingo"   : "Folga"   
+}
+
+"empregado": [
+    "nome": "joão", "idade": 32
+]
+
+"empregados":[
+    {"name":"João", "idade": 32}
+    {"name":"Maria", "idade": 23}
+    {"name":"Julia", "idade": 38}
+    {"name":"José", "idade": 34}
+    {"name":"Pedro", "idade": 25}
+]
+
