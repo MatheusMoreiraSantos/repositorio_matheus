@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cárdapio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <h2>Cálculo Preço Final</h2>
+        <p>Insira o código do produto e a quantidade adquirida.</p>
+        <div>
+            <form action="#" method="get">
+                <p>
+                    <label for="cod">Código do Produto: </label>
+                    <input type="text" name="codigo" id="cod_p" placeholder="insira o código do produto">
+                </p>
+
+                <p>
+                    <label for="qtd">Quantidade Adquirida: </label>
+                    <input type="text" name="quantidade" id="qtd_p" placeholder="insira a quantidade do produto">
+                </p>
+
+                <p>
+                    <input type="submit" value="Calcular" onclick="calculo1()">
+                    <input type="reset" value="Limpar">
+                </p>
+            </form>
+        </div>
+        <div>
+            <p id="out">Insira os dados solicitados e clique no botão.</p>
+        </div>
+
+        <script src="js/script.js"></script>
+
+</body>
+
+</html>
