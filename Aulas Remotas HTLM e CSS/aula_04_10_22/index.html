@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Countdown Timer</title>
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+
+<body>
+
+    <div class="timer">
+        <div class="timer__controls">
+            <button data-time="20" class="timer__button">20 Segundos</button>
+            <button data-time="300" class="timer__button">5 Minutos</button>
+            <button data-time="900" class="timer__button">15 Minutos</button>
+            <button data-time="1200" class="timer__button">20 Minutos</button>
+            <button data-time="3600" class="timer__button">1 Hora</button>
+            
+            <form class="customForm" id="custom" >
+                <input type="text" name="minutes" placeholder="Informe os Minutos">
+            </form>
+        </div>
+        <div class="display">
+            <h1 class="display__time-left"></h1>
+            <p class="display__end-time"></p>
+        </div>
+    </div>
+
+    <script src="js/arquivo.js"></script>
+
+</body>
+
+</html>
